@@ -297,3 +297,10 @@ def hasWon(revealedBoxes):
 
 if __name__ == '__main__':
     main()
+#The “Start Game” Animation
+#When the player clicks on an icon on the board, the program needs to track if this was the first icon of the pair that was clicked on or the second icon.
+#If firstSelection is None, the click was on the first icon and we store the XY coordinates in the firstSelection variable as a tuple of two integers (one for the X value, the other for Y).
+#On the second click the value will be this tuple and not None, which is how the program tracks that it is the second icon click.
+firstSelection = None # stores the (x, y) of the first box clicked
+DISPLAYSURF.fill(BGCOLOR)#fills the entire surface with the background color.This will also paint over anything that used to be on the surface, which gives us a clean slate to start drawing graphics on. 
+startGameAnimation(mainBoard)
